@@ -1,0 +1,58 @@
+<!-- <html>
+
+<head>
+    <title>DOM!!!</title>
+</head>
+
+<body>
+    <h1 id="one">Welcome</h1>
+    <p>This is the welcome message.</p>
+    <h2>Technology</h2>
+    <p>This is the technology section.</p>
+
+    <script>
+        let text = document.getElementsByTagName("p")[1].innerHTML;
+        alert("The first heading is " + text); //output : "The first heading is Welcome"
+        let newparag = document.createElement('p');
+        let newTextParag = document.createTextNode('je suis le nouveau paragraphe');
+        newParag.appendChild(newTextParag);
+        let body = document.getElementsByTagName("body")[0];
+        document.body.appendChild(newparag);
+        alert()
+    </script>
+
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestDom</title>
+</head>
+
+<body>
+    <div id="elem" about="Elephant" style=""></div>
+
+    <script>
+        let newDiv = document.getElementById("elem")
+
+        //getAttribute('name attribute')
+        newDiv.getAttribute('about'); // return 'Elephant'
+
+        //setAttribute(name attribute, value attribute)
+        newDiv.setAttribute('style', "color:blue;");
+
+        //you get --> <div id="elem" about="Elephant" style="color:blue" ></div>
+
+        //loop through the attributes of an element
+        for (let attr of newDiv.attributes) { // Lists all attributes
+            alert(attr.name + '=' + attr.value);
+        }
+    </script>
+</body>
+
+</html>
