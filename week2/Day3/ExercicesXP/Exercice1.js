@@ -10,3 +10,17 @@ console.log(newPeople)
 console.log(people.indexOf('Foo'))
 let last = people.pop();
 //-----------------------------------------END-----------------------------------------------------//
+
+
+//-------------------------------------------Partie II - Boucles-----------------------------------//
+for (let i in people) {
+    console.log(people[i])
+}
+
+for (let i in people) {
+
+    if (people[i] == "Jason") {
+        console.log(people[i])
+        break;
+    }
+}
