@@ -1,0 +1,45 @@
+<!-- <html>
+
+<head>
+    <title>DOM!!!</title>
+</head>
+
+<body>
+    <h1 id="one">je suis kagambega Aboubacar</h1>
+    <p>This is the welcome message.</p>
+    <h2>Technology</h2>
+    <p>This is the technology section.</p>
+
+    <script>
+        let text = document.getElementById("one").innerHTML;
+        alert("The first heading is " + text); //output : "The first heading is Welcome"
+    </script>
+
+</body>
+
+</html> -->
+
+<html>
+
+<head>
+    <title>DOM!!!</title>
+</head>
+
+<body>
+    <header></header>
+    <!-- <h1>Welcome</h1> -->
+    <p>This is the welcome message.</p>
+    <h2>Technology</h2>
+    <p id="second">This is the technology section.</p>
+
+    <script>
+        //let paragraphs = document.getElementsByTagName("p");
+        //alert("Content in the second paragraph is " + paragraphs[1].innerHTML);
+        //document.getElementById("second").innerHTML = "The orginal message is changed.";
+        document.getElementById("header").textContent = "Hello World!";
+        document.getElementsByTagName("p")[0].innerHTML = "<h1>Hello World!</h1>"
+    </script>
+
+</body>
+
+</html>
