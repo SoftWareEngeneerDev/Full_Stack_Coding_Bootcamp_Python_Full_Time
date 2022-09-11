@@ -21,8 +21,24 @@
     </ul>
     <script>
         let text = document.getElementById('container').innerHTML;
-        //console.log(text)
-        alert(text)
+        //let text2 = document.getElementsByClassName('list')[0].textContent = "Richard";
+        let text2 = document.getElementsByTagName('li')[1].textContent = "Richard";
+        let text3 = document.getElementsByClassName('list')[0].textContent;
+        alert(text3)
+            //let text4 = document.getElementsByTagName('ul')[0].textContent = "kagambega";
+        let text5 = document.getElementsByTagName('ul')[0].innerHTML;
+        alert(text5)
+            //let x = text5.getElementsByTagName('li')[0].textContent;
+            //alert(x)
+        let name1 = document.getElementsByTagName('li')[0].textContent = "kagambega";
+        let name2 = document.getElementsByTagName('li')[2].textContent = "kagambega";
+        let sarah = document.getElementsByTagName('li')[3].textContent;
+        //let x = y.getElementsByTagName('li')[0].textContent;
+        alert(sarah)
+        text3.removeChild(document.getElementsByTagName('li')[3])
+            //console.log(text)
+            //alert(text2)
+            //alert(text3)
     </script>
 </body>
 
