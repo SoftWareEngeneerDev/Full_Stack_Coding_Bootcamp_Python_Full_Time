@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice2DOM</title>
+</head>
+
+<body>
+    <div>Users:</div>
+    <ul>
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+</body>
+<script>
+    let divElem = document.getElementsByTagName('div')[0];
+    divElem.style.background = "blue"
+    alert(divElem)
+    let pete = document.getElementsByTagName('ul')[1].textContent;
+    alert(pete)
+</script>
+
+</html>
+
+</html>
