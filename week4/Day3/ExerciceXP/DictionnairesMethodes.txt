@@ -1,0 +1,9 @@
+dict.values(): permet d'acceder aux valeurs des clés d'un dictionnaire
+dict.keys(): permet d'acceder aux clés du dictionnaire
+dict.items():  listes les (clé et valeur) d'un dictionnaire
+dict.setdefault("model", "Mustang"): verifie si l'élément exist dans la liste sinon il l'ajoute
+dict.update({"year": 2020}) : met à jour le dictionnaire en ajoutant l'élément en fin du dictionnaire
+dict.pop(): supprime un élément(clé/valeur): en passant la clé en param
+dict.popitem() : supprime le diernier élément
+dict.clear(): suprime tout les éléments du dictionnaire
+mydict = thisdict.copy(): permet de faire la copie de tout le dictionnaire
