@@ -1,22 +1,19 @@
-"""
-🌟 ------------------------------Exercice1-------------------|
-: Convertir Des Listes En Dictionnaires
-Instructions
-Convertissez les deux listes suivantes en dictionnaires.
-Astuce : Utilisez la méthode zip
-keys = ['Ten', 'Twenty', 'Thirty']
-values = [10, 20, 30]
-Expected output:
-{'Ten': 10, 'Twenty': 20, 'Thirty': 30}
---------------------------------------------------------------|
-"""
-keys = ['Ten', 'Twenty', 'Thirty']
-values = [10, 20, 30]
-dict = {}
-print("------------------Convertion du nombre liste et tuple---------------------")
-for item in zip(keys, values):
-    for x in item:
-        dict.update(x[0])
-    print(item)
+# 🌟 Exercice 1 : Convertir Des Listes En Dictionnaires
+# Des Instructions
+# Convertissez les deux listes suivantes en dictionnaires.
+# Astuce : Utilisez la zipméthode
+# keys = ['Ten', 'Twenty', 'Thirty']
+# values = [10, 20, 30]
+# Expected output:
+# {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
 
-print(dict)
+keys = ['Ten', 'Twenty', 'Thirty']
+values = [10, 20, 30]
+list= []
+for cle in zip(keys,values):
+    #print(cle)
+    list.append(cle)
+    print(list)
+    print(type(list))
+    #print(type(cle))
+    #print(list(cle))
