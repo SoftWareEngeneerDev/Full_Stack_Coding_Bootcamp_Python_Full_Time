@@ -23,3 +23,16 @@ class Bengal(Cat):
 class Chartreux(Cat):
     def sing(self, sounds):
         return f'{sounds}'
+
+
+class Siamese(Cat):
+    def sing(self, sounds):
+        return f'{sounds}'
+
+patience = Bengal('patience',6)
+milou = Chartreux('milou',4)
+sheldon = Siamese('sheldon',8)
+
+all_cats = [patience,milou,sheldon]
+sara_pets = Pets(all_cats)
+sara_pets.walk()
