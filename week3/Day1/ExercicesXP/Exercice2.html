@@ -16,11 +16,18 @@
     </ul>
 </body>
 <script>
-    let divElem = document.getElementsByTagName('div')[0];
-    divElem.style.background = "blue"
-    alert(divElem)
-    let pete = document.getElementsByTagName('ul')[1].textContent;
-    alert(pete)
+    let div = document.getElementsByTagName('div')[0];
+    div.style.backgroundColor = 'light blue';
+    let firstLi = document.getElementsByTagName('li')[0];
+    firstLi.style.display = 'none'
+        //alert(document.getElementsByTagName('ul')[0].textContent)
+    let SecdLi = document.getElementsByTagName('li')[1];
+    SecdLi.style.border = 'solid'
+    document.body.style.fontSize = '30px'
+    if (div.hasAttribute('light blue')) {
+        alert("Hello" + document.getElementsByTagName('li')[0] + "and" + document.getElementsByTagName('li')[1])
+    }
+    //alert(div.textContent)
 </script>
 
 </html>
