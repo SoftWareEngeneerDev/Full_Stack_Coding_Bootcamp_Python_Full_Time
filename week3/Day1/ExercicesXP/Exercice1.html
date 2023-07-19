@@ -21,24 +21,31 @@
     </ul>
     <script>
         let text = document.getElementById('container').innerHTML;
-        //let text2 = document.getElementsByClassName('list')[0].textContent = "Richard";
+        alert(text)
+
         let text2 = document.getElementsByTagName('li')[1].textContent = "Richard";
-        let text3 = document.getElementsByClassName('list')[0].textContent;
-        alert(text3)
-            //let text4 = document.getElementsByTagName('ul')[0].textContent = "kagambega";
-        let text5 = document.getElementsByTagName('ul')[0].innerHTML;
+        alert(text2)
+
+        let ElemCorp = document.getElementsByClassName('list')[1];
+        let supp = document.getElementsByTagName('li')[3];
+        let Elemupp = ElemCorp.removeChild(supp);
+
+        alert('elment supprimé du noeud est :' + typeof(Elemupp) + '\ncontenu' + ' ' + Elemupp.textContent);
+
+        let text5 = document.getElementsByTagName('ul')[1].textContent;
         alert(text5)
-            //let x = text5.getElementsByTagName('li')[0].textContent;
-            //alert(x)
-        let name1 = document.getElementsByTagName('li')[0].textContent = "kagambega";
-        let name2 = document.getElementsByTagName('li')[2].textContent = "kagambega";
-        let sarah = document.getElementsByTagName('li')[3].textContent;
-        //let x = y.getElementsByTagName('li')[0].textContent;
-        alert(sarah)
-        text3.removeChild(text3.firstElementChild)
-            //console.log(text)
-            //alert(text2)
-            //alert(text3)
+        for (let i = 0; i < 2; i++) {
+            let ElemC = document.getElementsByClassName('list')[i];
+            ElemC.getElementsByTagName('li')[0].textContent = 'KAGAMBEGA';
+        }
+        //BONUS DE L'EXERCICE 1
+        let elemAjout1 = document.getElementsByClassName('list')[0];
+        elemAjout1.classList.add('student_list');
+        let elemAjout2 = document.getElementsByClassName('list')[1];
+        elemAjout2.classList.add('student_list');
+        //BONUS DE L'EXERCICE 2
+        let firstUl = document.getElementsByClassName('list')[0];
+        firstUl.classList.add('university', 'attendance');
     </script>
 </body>
 
