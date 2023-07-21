@@ -13,7 +13,7 @@ const book1 = {
 }
 
 const book2 = {
-    title: "ebintho",
+    title: "Les frasques d'Ebinto",
     auther: "Amadou Kone",
     image: "https://picsum.photos/seed/picsum/200/300",
     alreadyRead: true
