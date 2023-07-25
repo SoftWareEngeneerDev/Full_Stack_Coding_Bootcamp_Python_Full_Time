@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice1 XP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <article>
+        <h1 onmouseover="taillePolice()"> Some Facts </h1>
+        <h2> The Chocolate </h2>
+        <h3> History of the chocolate </h3>
+        <p> Chocolate is made from tropical Theobroma cacao tree seeds. Its earliest use dates back to the Olmec civilization in Mesoamerica.</p>
+        <p> After the European discovery of the Americas, chocolate became very popular in the wider world, and its demand exploded. </p>
+        <p> Chocolate has since become a popular food product that millions enjoy every day, thanks to its unique, rich, and sweet taste.</p>
+        <p> But what effect does eating chocolate have on our health?</p>
+        <!-- <button type="submit">Click Moi</button> -->
+    </article>
+    <button onclick="mettreEnGras()">Mettre en Gras</button>
+
+    <script>
+        //À l'aide d'une propriété DOM, récupérez le h1et console.log.
+        let h1Elem = document.querySelector('h1')
+        console.log(h1Elem)
+            //À l'aide des méthodes DOM, supprimez le dernier paragraphe de la <article>balise.
+        let article = document.querySelector('article')
+        let lastElem = article.lastElementChild
+        lastElem.remove()
+            //Ajoutez un écouteur d'événement qui changera la couleur d'arrière-plan du h2en rouge, lorsqu'il est cliqué dessus.
+        let h2Elem = document.querySelector('h2')
+        h2Elem.addEventListener('click', backgroundcolor)
+
+        function backgroundcolor() {
+            this.style.backgroundColor = 'red'
+        }
+        //Ajoutez un écouteur d'événement qui masquera le h3lorsqu'il est cliqué (utilisez la propriété display:none ).
+        let h3Elem = document.querySelector('h3')
+        h3Elem.addEventListener('click', cacheElem)
+
+        function cacheElem() {
+            this.style.display = 'none'
+        }
+
+        //Ajoutez un <button>au fichier HTML qui, une fois cliqué dessus, devrait mettre le texte de tous les paragraphes en gras.
+
+        function mettreEnGras() {
+            let AllPara = document.getElementsByTagName('p')
+            for (let i = 0; i < AllPara.length; i++) {
+                AllPara[i].style.fontWeight = 'bold'
+            }
+        }
+
+        //Bonus
+        //h1Elem.addEventListener('onmouseover', taillePolice)
+
+        function taillePolice() {
+            let h1Elem1 = document.querySelector('h1')
+            let aleatoire = Math.floor(Math.random() * 101)
+
+            h1Elem1.style.fontSize = aleatoire + "px"
+        }
+    </script>
+</body>
+
+</html>
