@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Volume of a Sphere</title>
+    <style>
+        body {
+            padding-top: 30px;
+        }
+        
+        label,
+        input {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Input radius value and get the volume of a sphere.</p>
+    <form id="MyForm">
+        <label for="radius">Radius</label><input type="text" name="radius" id="radius" required>
+        <label for="volume">Volume</label><input type="text" name="volume" id="volume">
+        <input type="submit" value="Calculate" id="submit">
+    </form>
+</body>
+<script>
+    //let form = document.forms.MyForm
+    //let rayon = document.MyForm.radius.value
+    let form = document.forms.MyForm
+    let radius = document.getElementById('radius')
+    let volume = document.getElementById('volume')
+    form.addEventListener("submit", fonctionVol)
+
+    function fonctionVol(e) {
+        e.preventDefault()
+        let rayon = parseFloat(radius.value)
+        let volumeS = sphereVolume(rayon)
+        volume.value = volumeS.toFixed(2)
+    }
+
+    function sphereVolume(rayon) {
+        const pi = 3.14159;
+        let volume = (4 / 3) * pi * Math.pow(rayon, 3);
+        return volume;
+    }
+</script>
+
+</html>
