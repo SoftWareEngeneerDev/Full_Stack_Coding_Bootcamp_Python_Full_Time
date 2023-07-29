@@ -44,6 +44,19 @@
         let volume = (4 / 3) * pi * Math.pow(rayon, 3);
         return volume;
     }
+    document.addEventListener('DOMContentLoaded', function LoadLevel() {
+        console.log('La page est entièrement chargée')
+    });
+    document.addEventListener('keyup', (event) => console.log(event.keyCode));
+
+    form.addEventListener('pointerenter', () => console.log('Le pointer de la souris est dans le formulaire'))
+    form.addEventListener('pointerleave', () => console.log('Le pointer de la souris est sortis du formulaire'))
+    document.addEventListener('resize', () => console.log('Tu es entrain de recharger la page'))
+
+    window.addEventListener('blur', () => {
+        let body = document.querySelector('body')
+        body.style.backgroundColor = 'grey'
+    })
 </script>
 
 </html>
