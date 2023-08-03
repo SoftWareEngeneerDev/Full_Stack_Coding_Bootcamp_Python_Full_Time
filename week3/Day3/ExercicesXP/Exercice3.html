@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #target {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background: yellow;
+        }
+        
+        #box {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="target"></div>
+    <br>
+    <div id="box"></div>
+    <script>
+        // Récupérez les éléments cibles
+        const target = document.getElementById('target');
+        const box = document.getElementById('box');
+
+        // Variables pour le déplacement
+        let isDragging = false;
+        let offsetX, offsetY;
+
+        // Gestionnaire d'événement lorsque le clic est enfoncé sur le div box
+        box.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - box.getBoundingClientRect().left;
+            offsetY = e.clientY - box.getBoundingClientRect().top;
+        });
+
+        // Gestionnaire d'événement lorsque le curseur est déplacé
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const x = e.clientX - offsetX;
+                const y = e.clientY - offsetY;
+                box.style.left = x + 'px';
+                box.style.top = y + 'px';
+            }
+        });
+
+        // Gestionnaire d'événement lorsque le clic est relâché
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+    </script>
+</body>
+
+</html>

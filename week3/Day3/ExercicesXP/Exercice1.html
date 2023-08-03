@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        p {
+            background: yellow;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <button id="clear">Clear Interval</button>
+    <script>
+        let divElem = document.getElementById('container')
+        let button = document.getElementById('clear')
+        button.addEventListener('click', clear)
+            //PARTIE I
+            //setTimeout(function clear() {
+            //divElem.textContent = "Hello World"
+            //}, 2000);
+
+        //PARTIE II
+        //setTimeout(function clear() {
+        //divElem.textContent = "Hello World"
+        //let pElem = document.createElement('p')
+        //pElem.textContent = "Hello World"
+        //divElem.appendChild(pElem)
+        //}, 2000);
+
+
+        // PARTIEII
+
+
+        function clear() {
+            let start = Date.now();
+
+            let set = setInterval(function setI() {
+                let timedPass = Date.now() - start;
+                let pElem = document.createElement('p');
+                pElem.textContent = "Hello World";
+                divElem.appendChild(pElem);
+                console.log(timedPass)
+                if (timedPass > 10000) {
+                    clearInterval(set)
+                }
+            }, 2000);
+
+
+        }
+    </script>
+</body>
+
+</html>
